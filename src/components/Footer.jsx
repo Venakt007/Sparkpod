@@ -36,11 +36,7 @@ export default function Footer() {
           <div>
             <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               style={{ display: 'inline-block', marginBottom: 16, textDecoration: 'none' }}>
-              <img
-                src={fullLogoImg}
-                alt="SparkPod Technologies"
-                style={{ height: 56, width: 'auto', display: 'block', borderRadius: 8, filter: 'brightness(0) invert(1)' }}
-              />
+              <img src={fullLogoImg} alt="SparkPod Technologies" style={{ height: 56, width: 'auto', display: 'block', borderRadius: 8 }} />
             </a>
             <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,.38)', lineHeight: 1.72, maxWidth: 256, marginBottom: 8 }}>
               A Texas-based US IT staffing company connecting businesses with top technology professionals
