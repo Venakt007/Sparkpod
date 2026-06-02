@@ -15,7 +15,7 @@ const STATS = [
 
 export default function About() {
   return (
-    <section className="section section-gray" id="about">
+    <section className="section section-gray" id="about" aria-label="About SparkPod Technologies — IT Staffing Company in Austin Texas">
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: 80, alignItems: 'start' }} className="about-grid">
           <style>{`

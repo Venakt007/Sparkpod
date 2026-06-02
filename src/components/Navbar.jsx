@@ -43,10 +43,10 @@ export default function Navbar() {
       <nav style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
         height: 68,
-        background: scrolled ? 'rgba(8,14,40,.98)' : 'rgba(8,14,40,.92)',
+        background: scrolled ? 'rgba(255,253,245,.99)' : 'rgba(255,253,245,.96)',
         backdropFilter: 'blur(20px)',
-        borderBottom: '1px solid rgba(255,255,255,.07)',
-        boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,.4)' : 'none',
+        borderBottom: '1px solid rgba(27,47,122,.1)',
+        boxShadow: scrolled ? '0 2px 20px rgba(27,47,122,.12)' : 'none',
         display: 'flex', alignItems: 'center', padding: '0 40px',
         transition: 'background .3s, box-shadow .3s',
         gap: 0,
@@ -64,12 +64,14 @@ export default function Navbar() {
             <li key={href}>
               <a href={href} onClick={e => { e.preventDefault(); handleNav(href) }}
                 style={{
-                  fontSize: 13.5, fontWeight: 500, color: active === href ? '#fff' : 'rgba(255,255,255,.7)',
-                  padding: '6px 14px', borderRadius: 8, display: 'block',
-                  textDecoration: 'none', transition: 'color .2s, background .2s',
-                  background: active === href ? 'rgba(212,32,32,.2)' : 'transparent',
+                  fontSize: 13.5, fontWeight: 600, color: active === href ? '#D42020' : '#0C1535',
+                  padding: '6px 2px', display: 'block', margin: '0 12px',
+                  textDecoration: 'none', transition: 'color .2s',
+                  background: 'transparent',
                   borderBottom: active === href ? '2px solid #D42020' : '2px solid transparent',
-                }}>
+                }}
+                onMouseEnter={e => e.currentTarget.style.color = '#D42020'}
+                onMouseLeave={e => e.currentTarget.style.color = active === href ? '#D42020' : '#0C1535'}>
                 {label}
               </a>
             </li>
@@ -87,7 +89,7 @@ export default function Navbar() {
         <button onClick={() => setMenuOpen(!menuOpen)}
           className="nav-mobile"
           style={{
-            background: 'none', border: 'none', color: '#fff',
+            background: 'none', border: 'none', color: '#0C1535',
             fontSize: 24, cursor: 'pointer', marginLeft: 'auto', display: 'none',
           }}>
           <i className={menuOpen ? 'bi bi-x-lg' : 'bi bi-list'}></i>
@@ -98,16 +100,17 @@ export default function Navbar() {
       {menuOpen && (
         <div style={{
           position: 'fixed', top: 68, left: 0, right: 0, zIndex: 999,
-          background: 'rgba(8,14,40,.98)', backdropFilter: 'blur(20px)',
+          background: 'rgba(255,253,245,.99)', backdropFilter: 'blur(20px)',
           padding: '16px 32px 24px',
-          borderBottom: '1px solid rgba(255,255,255,.08)',
+          borderBottom: '1px solid rgba(27,47,122,.1)',
+          boxShadow: '0 8px 24px rgba(27,47,122,.1)',
         }}>
           {NAV_LINKS.map(({ label, href }) => (
             <a key={href} href={href} onClick={e => { e.preventDefault(); handleNav(href) }}
               style={{
                 display: 'block', fontSize: 15, fontWeight: 500,
-                color: 'rgba(255,255,255,.8)', padding: '13px 0',
-                borderBottom: '1px solid rgba(255,255,255,.06)',
+                color: '#0C1535', padding: '13px 0',
+                borderBottom: '1px solid rgba(27,47,122,.08)',
                 textDecoration: 'none',
               }}>
               {label}

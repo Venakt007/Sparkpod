@@ -27,7 +27,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section className="section" style={{ background: '#fff' }}>
+    <section className="section" style={{ background: '#fff' }} aria-label="Why Choose SparkPod Technologies for IT Staffing">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: 60 }} className="fade-up">
           <span className="sec-label">01 — Why SparkPod Technologies</span>

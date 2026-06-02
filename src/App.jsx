@@ -5,9 +5,13 @@ import TrustedBy from './components/TrustedBy'
 import Features from './components/Features'
 import Industries from './components/Industries'
 import Services from './components/Services'
+import ServiceDetail from './components/ServiceDetail'
 import About from './components/About'
 import Process from './components/Process'
 import Stats from './components/Stats'
+import Locations from './components/Locations'
+import BlogTeaser from './components/BlogTeaser'
+import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 
@@ -26,15 +30,21 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <TrustedBy />
-      <Features />
-      <Industries />
-      <Services />
-      <About />
-      <Process />
-      <Stats />
-      <CTA />
+      <main id="main-content">
+        <Hero />
+        <TrustedBy />
+        <Features />
+        <Industries />
+        <Services />
+        <ServiceDetail />
+        <About />
+        <Process />
+        <Stats />
+        <Locations />
+        <BlogTeaser />
+        <FAQ />
+        <CTA />
+      </main>
       <Footer />
     </>
   )

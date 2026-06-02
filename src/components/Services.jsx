@@ -45,7 +45,7 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section className="section" style={{ background: '#fff' }} id="services">
+    <section className="section" style={{ background: '#fff' }} id="services" aria-label="IT Staffing Services offered by SparkPod Technologies">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: 60 }} className="fade-up">
           <span className="sec-label">03 — Our Services</span>

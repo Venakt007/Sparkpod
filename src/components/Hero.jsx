@@ -5,7 +5,11 @@ const MAILTO = `mailto:jake@sparkpodtech.com?subject=IT%20Staffing%20Requirement
 
 export default function Hero() {
   return (
-    <section style={{ minHeight: '100vh', paddingTop: 68, display: 'grid', gridTemplateColumns: '1fr 1fr' }} className="hero-grid">
+    <section
+      aria-label="SparkPod Technologies — IT Staffing Agency in Austin TX"
+      style={{ minHeight: '100vh', paddingTop: 68, display: 'grid', gridTemplateColumns: '1fr 1fr' }}
+      className="hero-grid"
+    >
       <style>{`
         @keyframes spin       { to { transform: rotate(360deg); } }
         @keyframes float      { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
@@ -114,7 +118,7 @@ export default function Hero() {
         {/* Hero banner background image */}
         <img
           src={heroBanner}
-          alt=""
+          alt="SparkPod Technologies IT staffing team — Austin TX"
           style={{
             position: 'absolute', inset: 0,
             width: '100%', height: '100%',
